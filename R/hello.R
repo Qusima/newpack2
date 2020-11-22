@@ -1,6 +1,6 @@
 # Hello, world!
 #
-# This is an example function named 'hello' 
+# This is an example function named 'hello'
 # which prints 'Hello, world!'.
 #
 # You can learn more about package authoring with RStudio at:
@@ -16,3 +16,14 @@
 hello <- function() {
   print("Hello, world!")
 }
+
+
+library (devtools)
+library(tidyverse)
+
+sciezka <- "D:/Studia/3_Rok_1_semestr/Pakiet/newpack"
+dir.create(sciezka)
+create_package(path = sciezka)
+
+use_git()
+3
