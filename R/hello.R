@@ -8,3 +8,5 @@ use_git()
 use_r("hello2")
 
 load_all()
+
+hello2()
