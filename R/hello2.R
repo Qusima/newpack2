@@ -1,3 +1,17 @@
+#' Funkcja oblicza srednia z losowych zmiennych
+#'
+#' @param a double
+#' @param b double
+#' @param d double
+#'
+#' @return double
+#'
+#' @export
+#'
+#' @examples
+#' hello2(a = 1, b= 500, d =23)
+
+
 hello2 <- function(a = 10 , b = 20, d=  2)
 {
   out <- sqrt ( a * b * d/2 + 100+1)
