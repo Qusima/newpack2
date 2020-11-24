@@ -1,42 +1,44 @@
-#' Funkcja oblicza srednia z losowych zmiennych
+#' Obliczenia emisji spalin
 #'
-#' @param Danecsv double
-#' @param Kat double
-#' @param Paliwo double
-#' @param Stand
-#' @param Tech
-#' @param zaniecz
-#' @param mod
+#' @param dane dataframe
+#' @param kategoria character
+#' @param euro character
+#' @param mode character
+#' @param substancja character
 #'
-#' @return double
-#'
+#' @return
+#' @import dplyr tidyverse ggplot2
 #' @export
 #'
 #' @examples
-#' hello2(a = 1, b= 500, d =23)
 
 
 
-kporz_funkcja <- function(Danecsv,Kat,Paliwo,Stand,Techn, zaniecz ,mod)
+kporz_funkcja <- function(dane = input,
+                     kategoria = "Passenger Cars",
+                     #paliwo = "Petrol",
+                     #segment = "Mini",
+                     euro = "Euro 5",
+                     #technologia = "",
+                     mode = "",
+                     substancja = c("CO", "EC")) {
 
 
-{
+  out <- wskazniki %>%
+    filter(Category %in% kategoria) %>%
+    filter(Euro.Standard %in% euro) %>%
+    filter(Pollutant %in% substancja) %>%
+    filter(Mode %in% mode)
+  #filter(Fuel %in% paliwo)
 
-  Danecsv %>%
-    filter(Category==Kat,Fuel==Paliwo,`Euro Standard` == Stand,Technology == Techn) -> test
+  out <- inner_join(x = out, y = input, by = c("Segment","Fuel","Technology"))
 
-  test <- subset(test,Pollutant != "CH4")
+  out <- out %>%
+    mutate(Emisja = Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))/
+                             (Epsilon * Procent ^ 2 + Zita * Procent + Hta) * (1-Reduction))
+    ) %>%
+    select(Category, Fuel, Euro.Standard, Technology, Pollutant, Mode, Segment, Emisja, Nat)
 
-
-  test %>% filter(Pollutant==zaniecz,Mode==mod) -> test
-
-
-  for (i in 1:nrow(test)) {
-    test$wynik <- (test$Alpha*test$`50`^2+test$Beta*test$`50`+test$Gamma+(test$Delta/test$`50`))/
-      (test$Epsilon*test$`50`^2+test$Zita*test$`50`+test$Hta)*(1-test$`Reduction Factor [%]`)
-  }
-
-
-  return(test)
-
+  out <<- out
+  return(out)
 }
