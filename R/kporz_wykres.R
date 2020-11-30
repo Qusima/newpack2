@@ -25,3 +25,5 @@ kporz_wykres <- function(Danecsv,zm1,zm2) {
 
 
 }
+
+

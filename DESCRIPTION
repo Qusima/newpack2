@@ -13,4 +13,5 @@ Imports:
     base,
     stats,
     dplyr,
-    tidyverse
+    tidyverse,
+    magrittr,
