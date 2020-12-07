@@ -36,6 +36,10 @@ kporz_funkcja_v1 <- function(Danecsv,
 
 {
 
+
+
+
+
   wek1 <- c(unique(Danecsv$Category))
 
   if (!is.null(Kat)) {
@@ -145,11 +149,12 @@ kporz_funkcja_v1 <- function(Danecsv,
 
   dane <- Danecsv
 
+  dane$Nat <- rnorm(nrow(dane), mean = 100, sd = 50)
 
 
   for (i in 1:nrow(dane)) {
-    dane$wynik <- (dane$Alpha*dane$`50`^2+dane$Beta*dane$`50`+dane$Gamma+(dane$Delta/dane$`50`))/
-      (dane$Epsilon*dane$`50`^2+dane$Zita*dane$`50`+dane$Hta)*(1-dane$`Reduction Factor [%]`)
+    dane$wynik <- (dane$Nat *( (dane$Alpha*dane$`50`^2+dane$Beta*dane$`50`+dane$Gamma+(dane$Delta/dane$`50`))/
+      (dane$Epsilon*dane$`50`^2+dane$Zita*dane$`50`+dane$Hta)*(1-dane$`Reduction Factor [%]`)))
   }
 
 
