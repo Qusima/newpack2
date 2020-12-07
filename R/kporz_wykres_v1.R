@@ -10,9 +10,9 @@
 #'
 #' @return dataframe
 #'
-#' @import dplyr
+#' @importFrom dplyr
 #'
-#' @import magrittr
+#' @importFrom magrittr
 #'
 #' @export
 #'
@@ -20,6 +20,8 @@
 
 
 
+#utils::globalVariables(c("Category", "Fuel", 'Euro Standard'))
+#globalVariables(c("Category", "Fuel"))
 
 
 kporz_funkcja_v1 <- function(Danecsv,

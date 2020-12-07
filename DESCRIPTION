@@ -4,7 +4,7 @@ Title: Testowy
 Version: 0.1.0
 Author: Krzysztof Porzucek
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: jeszcze nic nie robi
+Description: jeszcze nic nie robi ale bedzie robic.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -14,4 +14,5 @@ Imports:
     stats,
     dplyr,
     tidyverse,
+    rlang,
     magrittr,

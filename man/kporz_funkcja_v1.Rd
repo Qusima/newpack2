@@ -4,15 +4,7 @@
 \alias{kporz_funkcja_v1}
 \title{Funkcja oblicza srednia z losowych zmiennych}
 \usage{
-kporz_funkcja_v1(
-  Danecsv,
-  Kat = "Passenger Cars",
-  Paliwo,
-  Stand,
-  Techn,
-  zaniecz,
-  mod
-)
+kporz_funkcja_v1(Danecsv, Kat, Paliwo, Stand, Techn, zaniecz, mod)
 }
 \arguments{
 \item{Danecsv}{dataframe}
