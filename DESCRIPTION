@@ -16,3 +16,4 @@ Imports:
     tidyverse,
     rlang,
     magrittr,
+    ggplot2,

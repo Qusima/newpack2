@@ -10,9 +10,7 @@
 #'
 #' @return dataframe
 #'
-#' @importFrom dplyr
-#'
-#' @importFrom magrittr
+#' @import dplyr magrittr tidyverse stats ggplot2
 #'
 #' @export
 #'
@@ -20,9 +18,9 @@
 
 
 
-#utils::globalVariables(c("Category", "Fuel", 'Euro Standard'))
-#globalVariables(c("Category", "Fuel"))
 
+
+utils::globalVariables(c("Category","Fuel","Euro Standard","Technology","Pollutant","Mode"))
 
 kporz_funkcja_v1 <- function(Danecsv,
                              Kat,
