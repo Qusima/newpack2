@@ -4,7 +4,7 @@
 \alias{kporz_wykres}
 \title{Funkcja oblicza srednia z losowych zmiennych}
 \usage{
-kporz_wykres(Danecsv, zm1, zm2, zm3)
+kporz_wykres(Danecsv, zm1, zm2, zm3, zm4, zm5)
 }
 \arguments{
 \item{Danecsv}{dataframe}
@@ -14,10 +14,17 @@ kporz_wykres(Danecsv, zm1, zm2, zm3)
 \item{zm2}{charackter}
 
 \item{zm3}{charackter}
+
+\item{zm4}{charackter}
+
+\item{zm5}{charackter}
 }
 \value{
 dataframe
 }
 \description{
 Funkcja oblicza srednia z losowych zmiennych
+}
+\examples{
+kporz_wykres(b2,"Gamma","wynik","Hta","tytuĹ‚ wykresu","wykres1")
 }

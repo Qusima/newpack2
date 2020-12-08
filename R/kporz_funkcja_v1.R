@@ -1,4 +1,4 @@
-#' Funkcja oblicza srednia z losowych zmiennych
+#' Funkcja oblicza srednia z losowych zmienn
 #'
 #' @param Danecsv dataframe
 #' @param Kat character
@@ -8,13 +8,15 @@
 #' @param zaniecz character
 #' @param mod character
 #'
+#' @title tytul
+#' @name kporz_funkcja_v1
 #' @return dataframe
 #'
 #' @import dplyr magrittr tidyverse stats ggplot2
 #'
 #' @export
 #'
-#' @examples
+#' @examples kporz_funkcja_v1(Danecsv,"Passenger Cars",NULL,NULL,NULL,NULL,"Urban Peak")
 
 
 
