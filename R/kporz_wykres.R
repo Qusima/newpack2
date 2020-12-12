@@ -1,6 +1,6 @@
 #' Funkcja oblicza srednia z losowych zmiennych
 #'
-#' @param Danecsv dataframe
+#' @param data dataframe
 #' @param zm5 charackter
 #' @param zm4 charackter
 #' @param zm3 charackter
@@ -9,18 +9,22 @@
 #'
 #' @return dataframe
 #'
+#' @title kporz_wykres
+#' @name kporz_wykres
 #'
-#' @import dplyr magrittr tidyverse stats ggplot2
+#' @import dplyr magrittr tidyverse stats ggplot2 rlang
+#'
+#' @example kporz_wykres(b4,"Gamma","wynik","Hta","tytuł wykresu","wykres1")
 #'
 #' @export
-#'
-#' @examples kporz_wykres(b2,"Gamma","wynik","Hta","tytuł wykresu","wykres1")
 
 
 
 
 
-kporz_wykres <- function(Danecsv,
+
+
+kporz_wykres <- function(data,
                          zm1,
                          zm2,
                          zm3,
@@ -41,7 +45,7 @@ zm3  <- ensym(zm3)
 switch(zm5,
        wykres1={
 
-  ggplot(Danecsv,aes(x = !!rlang::ensym(zm1), y= !!rlang::ensym(zm2),  colour = !!rlang::ensym(zm3) )) +
+  ggplot(data,aes(x = !!rlang::ensym(zm1), y= !!rlang::ensym(zm2),  colour = !!rlang::ensym(zm3) )) +
   geom_point(shape = 18,size=3) +
     xlim(0, 100)+
     ylim(0, 10)+
@@ -61,7 +65,7 @@ switch(zm5,
 
   wykres2=
     {
-      ggplot(Danecsv,aes(x = !!rlang::ensym(zm1), y= !!rlang::ensym(zm2),colour = !!rlang::ensym(zm3) )) +
+      ggplot(data,aes(x = !!rlang::ensym(zm1), y= !!rlang::ensym(zm2),colour = !!rlang::ensym(zm3) )) +
         geom_bar(stat='identity',width=1)+
         theme_minimal()+
         xlim(0, 200)+
@@ -83,7 +87,7 @@ switch(zm5,
   wykres3=
     {
 
-      ggplot(Danecsv,aes(x = !!rlang::ensym(zm1), y= !!rlang::ensym(zm2) )) +
+      ggplot(data,aes(x = !!rlang::ensym(zm1), y= !!rlang::ensym(zm2) )) +
         geom_hex()+
         theme_minimal()+
         xlim(0, 150)+
@@ -103,7 +107,7 @@ switch(zm5,
 
   wykres4=
     {
-      ggplot(Danecsv,aes(x = !!rlang::ensym(zm1) )) +
+      ggplot(data,aes(x = !!rlang::ensym(zm1) )) +
         geom_histogram(color="blue",fill="lightblue")+
         theme_minimal()+
         xlim(0, 150)+

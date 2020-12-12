@@ -17,3 +17,7 @@ Imports:
     rlang,
     magrittr,
     ggplot2,
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

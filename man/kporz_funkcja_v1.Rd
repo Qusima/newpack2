@@ -2,9 +2,9 @@
 % Please edit documentation in R/kporz_funkcja_v1.R
 \name{kporz_funkcja_v1}
 \alias{kporz_funkcja_v1}
-\title{tytul}
+\title{kporz_funkcja_v1}
 \arguments{
-\item{Danecsv}{dataframe}
+\item{data}{dataframe}
 
 \item{Kat}{character}
 
@@ -25,5 +25,5 @@ dataframe
 Funkcja oblicza srednia z losowych zmienn
 }
 \examples{
-kporz_funkcja_v1(Danecsv,"Passenger Cars",NULL,NULL,NULL,NULL,"Urban Peak")
+kporz_funkcja_v1(data = Danecsv,Kat = "Passenger Cars",Paliwo = NULL,Stand = NULL,Techn = NULL,zaniecz = NULL,mod = "Urban Peak")
 }

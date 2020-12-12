@@ -1,6 +1,6 @@
 #' Funkcja oblicza srednia z losowych zmienn
 #'
-#' @param Danecsv dataframe
+#' @param data dataframe
 #' @param Kat character
 #' @param Paliwo character
 #' @param Stand character
@@ -8,156 +8,129 @@
 #' @param zaniecz character
 #' @param mod character
 #'
-#' @title tytul
+#' @title kporz_funkcja_v1
 #' @name kporz_funkcja_v1
 #' @return dataframe
 #'
-#' @import dplyr magrittr tidyverse stats ggplot2
+#' @example kporz_funkcja_v1(data = Danecsv,Kat = "Passenger Cars",Paliwo = NULL,Stand = NULL,Techn = NULL,zaniecz = NULL,mod = "Urban Peak")
+#' @import dplyr magrittr tidyverse stats ggplot2 rlang
+#'
 #'
 #' @export
-#'
-#' @examples kporz_funkcja_v1(Danecsv,"Passenger Cars",NULL,NULL,NULL,NULL,"Urban Peak")
-
-
-
 
 
 utils::globalVariables(c("Category","Fuel","Euro Standard","Technology","Pollutant","Mode"))
 
-kporz_funkcja_v1 <- function(Danecsv,
-                             Kat,
-                             Paliwo,
-                             Stand ,
-                             Techn,
-                             zaniecz,
-                             mod)
 
 
-
-{
+kporz_funkcja_v1 <- function(data ,
+                             Kat = "Passenger Cars",
+                             Paliwo = NULL,
+                             Stand  = NULL,
+                             Techn = NULL,
+                             zaniecz = NULL,
+                             mod = NULL) {
 
 
 
 
-
-  wek1 <- c(unique(Danecsv$Category))
+  wek1 <- c(unique(data$Category))
 
   if (!is.null(Kat)) {
 
-    Danecsv <- Danecsv %>%
-      filter(Category %in% Kat)
+    data <- data %>%
+      dplyr::filter(data$Category %in% Kat)
   }
   else
-
   {
-    Danecsv <- Danecsv %>%
-      filter(Category %in% wek1)
+    data <- data %>%
+      dplyr::filter(data$Category %in% wek1)
 
   }
 
-
-  #==================================================
-
-  wek2 <- c(unique(Danecsv$Fuel))
+  wek2 <- c(unique(data$Fuel))
 
   if (!is.null(Paliwo)) {
 
-    Danecsv <- Danecsv %>%
-      filter(Fuel %in% Paliwo)
+    data <- data %>%
+      dplyr::filter(data$Fuel %in% Paliwo)
   }
   else
   {
-    Danecsv <- Danecsv %>%
-      filter(Fuel %in% wek2)
+    data <- data %>%
+      dplyr::filter(data$Fuel %in% wek2)
 
   }
 
-  #==================================================
-
-
-  wek3 <- c(unique(Danecsv$`Euro Standard`))
+  wek3 <- c(unique(data$`Euro Standard`))
 
   if (!is.null(Stand)) {
 
-    Danecsv <- Danecsv %>%
-      filter(`Euro Standard` %in% Stand)
+    data <- data %>%
+      dplyr::filter(data$`Euro Standard` %in% Stand)
   }
   else
   {
-    Danecsv <- Danecsv %>%
-      filter(`Euro Standard` %in% wek3)
+    data <- data %>%
+      dplyr::filter(data$`Euro Standard` %in% wek3)
 
   }
 
-
-  #==================================================
-
-
-  wek4 <- c(unique(Danecsv$Technology))
+  wek4 <- c(unique(data$Technology))
 
   if (!is.null(Techn)) {
 
-    Danecsv <- Danecsv %>%
-      filter(Technology %in% Techn)
+    data <- data %>%
+      dplyr::filter(data$Technology %in% Techn)
   }
   else
   {
-    Danecsv <- Danecsv %>%
-      filter(Technology %in% wek4)
+    data <- data %>%
+      dplyr::filter(data$Technology %in% wek4)
 
   }
 
-  #==================================================
-
-  wek5 <- c(unique(Danecsv$Pollutant))
+  wek5 <- c(unique(data$Pollutant))
 
   if (!is.null(zaniecz)) {
 
-    Danecsv <- Danecsv %>%
-      filter(Pollutant %in% zaniecz)
+    data <- data %>%
+      dplyr::filter(data$Pollutant %in% zaniecz)
   }
   else
   {
-    Danecsv <- Danecsv %>%
-      filter(Pollutant %in% wek5)
+    data <- data %>%
+      dplyr::filter(data$Pollutant %in% wek5)
 
   }
 
-
-  #==================================================
-
-
-  wek6 <- c(unique(Danecsv$Mode))
+  wek6 <- c(unique(data$Mode))
 
   if (!is.null(mod)) {
 
-    Danecsv <- Danecsv %>%
-      filter(Mode %in% mod)
+    data <- data %>%
+      dplyr::filter(data$Mode %in% mod)
   }
   else
   {
-    Danecsv <- Danecsv %>%
-      filter(Mode %in% wek6)
-
-  }
-
-
-  #==================================================
+    data <- data %>%
+      dplyr::filter(data$Mode %in% wek6) }
 
 
 
 
-  dane <- Danecsv
+  dane <- data
 
-  dane$Nat <- rnorm(nrow(dane), mean = 100, sd = 50)
+  liczba <- as.numeric(nrow(dane))
 
 
-  for (i in 1:nrow(dane)) {
+
+  dane$Nat <- rnorm(liczba, mean = 100, sd = 50)
+
+
     dane$wynik <- (dane$Nat *( (dane$Alpha*dane$`50`^2+dane$Beta*dane$`50`+dane$Gamma+(dane$Delta/dane$`50`))/
-      (dane$Epsilon*dane$`50`^2+dane$Zita*dane$`50`+dane$Hta)*(1-dane$`Reduction Factor [%]`)))
-  }
+                                 (dane$Epsilon*dane$`50`^2+dane$Zita*dane$`50`+dane$Hta)*(1-dane$`Reduction Factor [%]`)))
 
 
   return(dane)
-
 }

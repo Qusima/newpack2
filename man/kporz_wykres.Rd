@@ -2,12 +2,12 @@
 % Please edit documentation in R/kporz_wykres.R
 \name{kporz_wykres}
 \alias{kporz_wykres}
-\title{Funkcja oblicza srednia z losowych zmiennych}
+\title{kporz_wykres}
 \usage{
-kporz_wykres(Danecsv, zm1, zm2, zm3, zm4, zm5)
+kporz_wykres(data, zm1, zm2, zm3, zm4, zm5)
 }
 \arguments{
-\item{Danecsv}{dataframe}
+\item{data}{dataframe}
 
 \item{zm1}{charackter}
 
@@ -24,7 +24,4 @@ dataframe
 }
 \description{
 Funkcja oblicza srednia z losowych zmiennych
-}
-\examples{
-kporz_wykres(b2,"Gamma","wynik","Hta","tytuĹ‚ wykresu","wykres1")
 }
