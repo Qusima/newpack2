@@ -1,10 +1,10 @@
 Package: newpack2
 Type: Package
-Title: Testowyyyy
+Title: Pakiet do Emisji
 Version: 0.1.0
 Author: Krzysztof Porzucek
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: jeszcze nic nie robi ale bedzie robic.
+Maintainer: The package maintainer <krzyporz@gmail.com>
+Description: Pakiet szacuje emisje wedlug podanych argumentow.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

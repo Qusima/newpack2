@@ -5,7 +5,7 @@
 \alias{newpack2}
 \title{Pakiet oceny emisji (emission evaluation)}
 \description{
-Pakiet służy do obliczania emisji zanieczyszczeń generowanych przez pojazdy
+Pakiet sluzy do obliczania emisji zanieczyszczen generowanych przez pojazdy
 z silnikami spalinowymi i wyswietlania wyników na wykresach.
 }
 \details{

@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup1, include=FALSE,results='hide'}
+
 library(newpack2)
 ```
 
@@ -68,7 +69,7 @@ Ponizej kod do pomocy:
 __* Zainstalowanie devtools: __ 
  
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
-if(!require(devtools)) {install.packages("devtools"); require(devtools)}
+# if(!require(devtools)) {install.packages("devtools"); require(devtools)}
 ```
   
 
