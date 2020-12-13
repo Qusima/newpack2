@@ -1,6 +1,6 @@
 #'  Pakiet oceny emisji (emission evaluation)
 #'
-#' Pakiet służy do obliczania emisji zanieczyszczeń generowanych przez pojazdy
+#' Pakiet sluzy do obliczania emisji zanieczyszczen generowanych przez pojazdy
 #' z silnikami spalinowymi i wyswietlania wyników na wykresach.
 #'
 #' Pakiet zawiera dwie funkcje: kporz_funkcja_v1(),kporz_funkcjav1()

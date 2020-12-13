@@ -1,11 +1,11 @@
 #' Funkcja oblicza srednia z losowych zmiennych
 #'
 #' @param data dataframe
-#' @param zm5 charackter
-#' @param zm4 charackter
-#' @param zm3 charackter
-#' @param zm2 charackter
-#' @param zm1 charackter
+#' @param zm5 charackter rodzaj wykresu jeden z czterech
+#' @param zm4 charackter tytul wykresu
+#' @param zm3 charackter zmienna Fill/colour
+#' @param zm2 charackter zmienna y
+#' @param zm1 charackter zmienna x
 #'
 #' @return dataframe
 #'

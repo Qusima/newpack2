@@ -66,18 +66,74 @@ bedziemy takze potrzebowac pakietu __devtools__ aby instalacja przebiegla pomysl
 Ponizej kod do pomocy:
 
 __* Zainstalowanie devtools: __ 
-  
+ 
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
 if(!require(devtools)) {install.packages("devtools"); require(devtools)}
+```
+  
 
 __* Instalacja Pakietu:  __
   
-devtools::install_github("Qusima/newpack2")  
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+#devtools::install_github("Qusima/newpack2")  
 library(newpack2)
+```
+  
 
-__* Sprawdzenie informacji o pakiecie __   
+__* Sprawdzenie informacji o pakiecie __
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 help(package = "newpack2")
+```
+
+
 
 ## Funkcje
 
 
+Pakiet posiada dokumentacje  dostepna w pomocy Rstudio. Aby zapoznac sie z dokumnetacja
+trzeba wywolac ponizsze polecenia:
 
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+# ?Danecsv
+# ?Danecsv2
+# ?kporz_funkcja_v1
+# ?kporz_wykres
+# ?newpack2
+```
+
+Funkcje mozna uruchomic z parametrami domyslnymi za pomoca:
+
+```{r message=FALSE, warning=FALSE, results='hide'}
+kporz_funkcja_v1()
+```
+
+oraz  
+
+```{r message=FALSE, warning=FALSE, results='hide'}
+kporz_wykres()
+```
+
+
+Brane sa wtedy domyslne dane znajdujace sie w pakiecie i domyslne parametry  
+
+
+Aby zmienic parametry trzeba wzorowac sie na przykaldzie z dokumentacji funkcji,
+najpierw wpisujemy dane ktore chcemy uzyc w funkcji a nastepnie wypisujemy reszte parametrow
+za pomoca " " . Ponizej przykladowe uzycie funkcji na niektniedomyslnych parametrach:
+
+
+```{r message=FALSE, warning=FALSE}
+kporz_funkcja_v1(Kat = "Passenger Cars",Paliwo = NULL,Stand = "Euro 4",
+                 Techn = NULL,zaniecz = NULL,mod = "Urban Peak") -> b1
+
+kporz_wykres(b1,"Gamma","Alpha","Hta","tytuł wykresu","wykres4")
+```
+
+
+
+Trzeba pamietac ze funkcja kporz_funkcja_v1 za kazdym razem tworzy losowe wartosci kolumny Nat,
+przez co wyniki moga sie roznic przy kazdym uzyciu  
+
+
+W przypadku funkcji __kporz_funkcja_v1__ podanie argumentu jako NULL spowoduje wybranie
+wszystkich unikalnych wierszy z danej kolumny

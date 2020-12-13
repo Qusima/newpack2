@@ -16,15 +16,15 @@ kporz_wykres(
 \arguments{
 \item{data}{dataframe}
 
-\item{zm1}{charackter}
+\item{zm1}{charackter zmienna x}
 
-\item{zm2}{charackter}
+\item{zm2}{charackter zmienna y}
 
-\item{zm3}{charackter}
+\item{zm3}{charackter zmienna Fill/colour}
 
-\item{zm4}{charackter}
+\item{zm4}{charackter tytul wykresu}
 
-\item{zm5}{charackter}
+\item{zm5}{charackter rodzaj wykresu jeden z czterech}
 }
 \value{
 dataframe
