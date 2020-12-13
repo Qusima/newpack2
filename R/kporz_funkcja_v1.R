@@ -1,18 +1,19 @@
 #' Funkcja oblicza srednia z losowych zmienn
 #'
-#' @param data dataframe
-#' @param Kat character
-#' @param Paliwo character
-#' @param Stand character
-#' @param Techn character
-#' @param zaniecz character
-#' @param mod character
+#' @param data dataframe - Dane zawierajace kolumny z przynajmniej ponizszymi kolumnami
+#' @param Kat character - kategoria auta
+#' @param Paliwo character - rodzaj paliwa
+#' @param Stand character - euro standard
+#' @param Techn character - rodzaj technologi
+#' @param zaniecz character - rodzaj zanieczyszczenia
+#' @param mod character - tryb auta
 #'
 #' @title kporz_funkcja_v1
 #' @name kporz_funkcja_v1
 #' @return dataframe
 #'
-#' @example kporz_funkcja_v1(data = Danecsv,Kat = "Passenger Cars",Paliwo = NULL,Stand = NULL,Techn = NULL,zaniecz = NULL,mod = "Urban Peak")
+#' @examples \donttest{kporz_funkcja_v1(data = Danecsv,Kat = "Passenger Cars",Paliwo = NULL,
+#' Stand = NULL,Techn = NULL,zaniecz = NULL,mod = "Urban Peak") }
 #' @import dplyr magrittr tidyverse stats ggplot2 rlang
 #'
 #'

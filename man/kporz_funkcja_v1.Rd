@@ -4,19 +4,19 @@
 \alias{kporz_funkcja_v1}
 \title{kporz_funkcja_v1}
 \arguments{
-\item{data}{dataframe}
+\item{data}{dataframe - Dane zawierajace kolumny z przynajmniej ponizszymi kolumnami}
 
-\item{Kat}{character}
+\item{Kat}{character - kategoria auta}
 
-\item{Paliwo}{character}
+\item{Paliwo}{character - rodzaj paliwa}
 
-\item{Stand}{character}
+\item{Stand}{character - euro standard}
 
-\item{Techn}{character}
+\item{Techn}{character - rodzaj technologi}
 
-\item{zaniecz}{character}
+\item{zaniecz}{character - rodzaj zanieczyszczenia}
 
-\item{mod}{character}
+\item{mod}{character - tryb auta}
 }
 \value{
 dataframe
@@ -25,5 +25,6 @@ dataframe
 Funkcja oblicza srednia z losowych zmienn
 }
 \examples{
-kporz_funkcja_v1(data = Danecsv,Kat = "Passenger Cars",Paliwo = NULL,Stand = NULL,Techn = NULL,zaniecz = NULL,mod = "Urban Peak")
+\donttest{kporz_funkcja_v1(data = Danecsv,Kat = "Passenger Cars",Paliwo = NULL,
+Stand = NULL,Techn = NULL,zaniecz = NULL,mod = "Urban Peak") }
 }

@@ -25,3 +25,7 @@ dataframe
 \description{
 Funkcja oblicza srednia z losowych zmiennych
 }
+\examples{
+\donttest{ kporz_wykres(b4,"Gamma","wynik","Hta","tytuĹ‚ wykresu","wykres1") }
+
+}

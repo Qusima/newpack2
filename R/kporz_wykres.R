@@ -14,7 +14,7 @@
 #'
 #' @import dplyr magrittr tidyverse stats ggplot2 rlang
 #'
-#' @example kporz_wykres(b4,"Gamma","wynik","Hta","tytuł wykresu","wykres1")
+#' @examples \donttest{ kporz_wykres(b4,"Gamma","wynik","Hta","tytuł wykresu","wykres1") }
 #'
 #' @export
 
