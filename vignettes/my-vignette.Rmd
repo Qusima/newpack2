@@ -4,8 +4,11 @@ author: "Krzysztof Porzucek"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{my-vignette}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+  
 ---
 
 ```{r, include = FALSE}
@@ -41,6 +44,11 @@ Pakiet zawiera dwie funkcje:
 
 * kporz_funkcja_v1() - do filtracji danych i obliczania emisji
 * kporz_wykres() - do tworzenia wykresow
+
+Pakiet zawiera dwa zestawy danych:
+
+* mydata.Rdata - Dane (Danecsv) pasujace do funkcji kporz_funkcja_v1()
+* mydata2.Rdata - Dane (Danecsv2) pasujace do funkcji kporz_wykres()
   
 Oraz korzysta z ponizszych pakietow:
 

@@ -4,7 +4,14 @@
 \alias{kporz_wykres}
 \title{kporz_wykres}
 \usage{
-kporz_wykres(data = Danecsv, zm1, zm2, zm3, zm4, zm5)
+kporz_wykres(
+  data = Danecsv2,
+  zm1 = "Gamma",
+  zm2 = "wynik",
+  zm3 = "Hta",
+  zm4 = "tytul wykresu",
+  zm5 = "wykres1"
+)
 }
 \arguments{
 \item{data}{dataframe}

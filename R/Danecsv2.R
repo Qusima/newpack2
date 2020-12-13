@@ -1,6 +1,8 @@
 #' Dane wlaczone do pakietu
 #'
-#' Pasuja idealnie do wywolywania funkcji kporz_funkcja_v1 z pakietu newpack2
+#' Pasuja idealnie do wywolywania funkcji kporz_wykres z pakietu newpack2
+#' Sa mniejsze i idealnie dostosowywuja sie do utworzenia wykresu
+#'
 #'
 #' @format Dane zawieraja
 #' \describe{
@@ -31,8 +33,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' Danecsv
+#' Danecsv2
 #' }
 
-"Danecsv"
+"Danecsv2"
 
