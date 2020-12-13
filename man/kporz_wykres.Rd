@@ -4,7 +4,7 @@
 \alias{kporz_wykres}
 \title{kporz_wykres}
 \usage{
-kporz_wykres(data, zm1, zm2, zm3, zm4, zm5)
+kporz_wykres(data = Danecsv, zm1, zm2, zm3, zm4, zm5)
 }
 \arguments{
 \item{data}{dataframe}

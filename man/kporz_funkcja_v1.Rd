@@ -3,6 +3,17 @@
 \name{kporz_funkcja_v1}
 \alias{kporz_funkcja_v1}
 \title{kporz_funkcja_v1}
+\usage{
+kporz_funkcja_v1(
+  data = Danecsv,
+  Kat = "Passenger Cars",
+  Paliwo = NULL,
+  Stand = NULL,
+  Techn = NULL,
+  zaniecz = NULL,
+  mod = NULL
+)
+}
 \arguments{
 \item{data}{dataframe - Dane zawierajace kolumny z przynajmniej ponizszymi kolumnami}
 

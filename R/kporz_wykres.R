@@ -24,7 +24,7 @@
 
 
 
-kporz_wykres <- function(data,
+kporz_wykres <- function(data = Danecsv,
                          zm1,
                          zm2,
                          zm3,

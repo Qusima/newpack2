@@ -11,7 +11,7 @@ z silnikami spalinowymi i wyswietlania wyników na wykresach.
 \details{
 Pakiet zawiera dwie funkcje: kporz_funkcja_v1(),kporz_funkcjav1()
 
-kporz_funkcja_v1() filtruje dane wedlug podanych argumentow
+kporz_funkcja_v1() filtruje dane wedlug podanych argumentow i oblicza emisje do nich
 
 kporz_wykres() tworzy jeden z czterech dostepnych wykresow
 

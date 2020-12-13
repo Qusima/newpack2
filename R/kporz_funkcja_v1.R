@@ -20,11 +20,11 @@
 #' @export
 
 
-utils::globalVariables(c("Category","Fuel","Euro Standard","Technology","Pollutant","Mode"))
 
 
 
-kporz_funkcja_v1 <- function(data ,
+
+kporz_funkcja_v1 <- function(data = Danecsv ,
                              Kat = "Passenger Cars",
                              Paliwo = NULL,
                              Stand  = NULL,

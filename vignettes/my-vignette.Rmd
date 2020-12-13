@@ -1,5 +1,6 @@
 ---
-title: "my-vignette"
+title: "newpack2-vignette"
+author: "Krzysztof Porzucek"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{my-vignette}
@@ -14,6 +15,61 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup1, include=FALSE,results='hide'}
 library(newpack2)
 ```
+
+## O autorze i projekcie
+
+Pakiet zostal stworzony przez __Krzysztofa Porzucka__, studenta III Roku __Geoinformacjii__ na wydziale Geodezji Górniczej i Inżynierii Środowiska AGH. Pakiet zostal stworzony na potrzeby przedmiotu Metody inwentaryzacji i Szacowanie Emisji. E-mail kontaktowy __krzyporz@gmail.com__
+
+
+
+## O pakiecie
+
+Pakiet został stworzony w celu filtracji danych o samochodach, obliczenia emisji zanieczyszczeń oraz przedstawienia wyników
+za pomoca wykresow. Pakiet wymaga od uzytkownika podania danych ktore powinny sie skladac co najmniej z ponizszych kolumn:
+
+* Category
+* Fuel
+* Euro Standard
+* Techonolgy
+* Pollutant
+* Mode
+
+Pakiet zawiera dwie funkcje:
+
+* kporz_funkcja_v1() - do filtracji danych i obliczania emisji
+* kporz_wykres() - do tworzenia wykresow
+  
+Oraz korzysta z ponizszych pakietow:
+
+* dplyr 
+* magrittr
+* tidyverse
+* stats
+* ggplot2
+* rlang
+
+## Sposob Instalacji pakietu
+
+Aby zainstalowac pakiet trzeba skorzystac z repozutorium pakietu na platformie github
+bedziemy takze potrzebowac pakietu __devtools__ aby instalacja przebiegla pomyslnie.
+Ponizej kod do pomocy:
+
+__* Zainstalowanie devtools: __ 
+  
+if(!require(devtools)) {install.packages("devtools"); require(devtools)}
+
+__* Instalacja Pakietu:  __
+  
+devtools::install_github("Qusima/newpack2")  
+library(newpack2)
+
+__* Sprawdzenie informacji o pakiecie __   
+help(package = "newpack2")
+
+## Funkcje
+
+
+

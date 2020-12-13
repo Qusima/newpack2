@@ -32,4 +32,4 @@
 
 NULL
 
-utils::globalVariables(c("Category","Fuel","Euro Standard","Technology","Pollutant","Mode"))
+utils::globalVariables(c("Category","Fuel","Euro Standard","Technology","Pollutant","Mode","Danecsv"))
